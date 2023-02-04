@@ -1,7 +1,7 @@
 require("dotenv").config()
 const io = require("socket.io")(8900, {
   cors: {
-    origin: process.env.BACKEND_URL,
+    origin: process.env.FRONTEND_URL,
   },
 })
 console.log("urll-", process.env.BACKEND_URL)
