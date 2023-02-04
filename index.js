@@ -1,9 +1,10 @@
+require("dotenv").config()
 const io = require("socket.io")(8900, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: process.env.BACKEND_URL,
   },
 })
-
+console.log("urll-", process.env.BACKEND_URL)
 let users = []
 
 let videoUsers = []
